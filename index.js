@@ -4,7 +4,7 @@ const locationInput = document.querySelector("#locationInput");
 const myBtn = document.querySelector("#myBtn");
 
 async function getWeatherData() {
-    const fetchData = await fetch(`http://api.weatherapi.com/v1/current.json?key=3a09b50ecf7b4998a2c43253240106&q=${locationInput.value.toLowerCase()}`);
+    const fetchData = await fetch(`https://api.weatherapi.com/v1/current.json?key=3a09b50ecf7b4998a2c43253240106&q=${locationInput.value.toLowerCase()}`);
     const fetchJson = await fetchData.json();
     console.log(fetchJson.current.temp_c);
 
